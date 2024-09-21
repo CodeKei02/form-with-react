@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", system-ui;
+}
+
+:root {
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+
+body {
+  background-color: var(--green-200);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.form-container {
+  width: 90%;
+  min-height: 100%;
+  max-width: 550px;
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.title {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.form__input{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0 .5rem 0;
+}
+
+.form__input__box--names{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.form__label {
+  font-weight: 400;
+  color: var(--grey-900);
+}
+
+.input{
+  border-radius: .5rem;
+  padding: 1rem;
+  border: 1px solid var(--grey-500);
+}
+
+.input:focus{
+  border: 1px solid var(--green-200);
+}
+
+.form__input__box--radio{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-radio{
+  border: 1px solid var(--grey-500);
+  border-radius: .5rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.form-message{
+  border-radius: 1rem;
+  min-height: 25vh;
+  resize: none;
+}
+
+.form__input--checkbox{
+  margin: 2rem 0;
+  flex-direction: row;
+}
+
+.form__input--checkbox input{
+  width: 25px;
+}
+
+.button{
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: var(--green-600);
+  color: var(--white);
+  border: 0;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: var(--grey-900);
+}
+
+.required{
+  color: var(--red);
+}
+
+@media (min-width: 786px){
+  .form-container {
+    min-height: 90%;
+    margin: 3rem 0;
+    padding: 1.5rem;
+  }
+
+  .input, .form-radio input, .checkbox{
+    cursor: pointer;
+  }
+
+  .form__input--names {
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  .form__input__container--radio{
+    flex-direction: row;
+  }
+
+  .form__input--names .input, .form__input__container--radio .form-radio{
+    width: 135%;
+  }
+  
+  .form-message{
+    border-radius: .5rem;
+    min-height: 15vh;
+  }
+
+}
